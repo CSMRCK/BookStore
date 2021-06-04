@@ -2,7 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h1 class="display-3">List of books</h1>
-    <asp:Repeater ID="repeaterBooks" runat="server">
+    <asp:Repeater ID="repeaterBooks" runat="server" >
     <HeaderTemplate>
         <table cellspacing="0" rules="all" border="1" class="table table-striped">
             <tr>
@@ -20,6 +20,9 @@
                 </th>
                 <th scope="col" style="width: 100px">
                     Author
+                </th>
+                <th scope="col" style="width: 15px">
+                    
                 </th>
                 
             </tr>
@@ -41,6 +44,10 @@
             </td>
             <td>
                 <asp:Label ID="labelAuthor" runat="server" Text='<%# Eval("AuthorName") %>' />
+            </td>
+            <td>
+                 <asp:HyperLink ID="HyperLink1" runat="server" Text="Edit" NavigateUrl='<%# "~/Pages/EditBook.aspx?Id=" + Eval("Identifier") %>' ></asp:HyperLink>
+               
             </td>
         </tr>
             </tbody>

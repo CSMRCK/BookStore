@@ -1,5 +1,4 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditBook.aspx.cs" Inherits="BookStore.Pages.EditBook" %>
-
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditBook.aspx.cs" Inherits="BookStore.Pages.EditBook" EnableEventValidation="false" %> 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     
 
@@ -7,10 +6,9 @@
 
 
     <form>
-
+         
      <div class="form-group">
-    <label for="exampleInputEmail1">Id</label>
-    <input type="number" class="form-control" id="bookId" name="bookId" runat="server">
+       <asp:Label ID="Label1" runat="server"/>
   </div>
 
   <div class="form-group">

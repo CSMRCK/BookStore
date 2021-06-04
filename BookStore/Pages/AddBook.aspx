@@ -11,7 +11,7 @@
                     <td>
                         <asp:Label ID="lblbookTitle" runat="server" Text="Title"  CssClass="label label-default" Font-Size="Medium"></asp:Label></td>
                     <td>
-                        <asp:TextBox ID="bookTitle" runat="server" CssClass="input-sm"></asp:TextBox>
+                        <asp:TextBox ID="bookTitle" required="required" runat="server" CssClass="input-sm"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -31,14 +31,14 @@
                     <td>
                         <asp:Label ID="lblbookDescription" runat="server" Text="Description" CssClass="label label-default" Font-Size="Medium"></asp:Label></td>
                     <td>
-                        <asp:TextBox ID="bookDescription" runat="server" CssClass="input-sm"></asp:TextBox>
+                        <asp:TextBox ID="bookDescription" required="required" runat="server" CssClass="input-sm"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <asp:Label ID="lblbookAuthor" runat="server" Text="Author" CssClass="label label-default" Font-Size="Medium"></asp:Label></td>
                     <td>
-                        <asp:TextBox ID="bookAuthor" runat="server" CssClass="input-sm"></asp:TextBox>
+                        <asp:TextBox ID="bookAuthor" required="required" runat="server" CssClass="input-sm"></asp:TextBox>
                     </td>
                 </tr>
             </table>

@@ -17,7 +17,7 @@ namespace BookStore.Pages
         DataSet ds;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Label1.Text = Request.QueryString["Id"];
         }
 
         protected void SubmitEditBook(object sender, EventArgs e)
@@ -32,7 +32,8 @@ namespace BookStore.Pages
 
                 cmd.Parameters.AddWithValue("@bookTitle", bookTitle.Value);
                 cmd.Parameters.AddWithValue("@bookDescription", bookDescription.Value);
-                cmd.Parameters.AddWithValue("@bookId", bookId.Value);
+                cmd.Parameters.AddWithValue("@bookId", Label1.Text);
+                
                 cmd.ExecuteNonQuery();
                 con.Close();
                 bookTitle.Value = string.Empty;

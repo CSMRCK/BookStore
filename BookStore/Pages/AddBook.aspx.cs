@@ -8,9 +8,22 @@ namespace BookStore.Pages
     public partial class AddBook : System.Web.UI.Page
     {
         SqlCommand cmd;
-        static string initialCmd = "DECLARE @id INT; INSERT Books(BookTitle, BookDescription) VALUES(@bookTitle,@bookDescription);SET @id = (SELECT TOP 1 Id from Books order by id desc) INSERT Genres(Id, GenreTitle) VALUES(@id,  @bookGenre); INSERT Author(Id, AuthorName) VALUES(@id, @bookAuthor); ";
 
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            //string connectionString = ConfigurationManager.ConnectionStrings["BookStoreConnection"].ConnectionString;
+            //SqlConnection connection = new SqlConnection(connectionString);
+            //cmd = new SqlCommand("GetGenres", connection);
+            //cmd.CommandType = CommandType.StoredProcedure;
+            //SqlDataAdapter sda = new SqlDataAdapter();
+            //sda.SelectCommand = cmd;
+            //DataTable dt = new DataTable();
+            //sda.Fill(dt);
+            //bookGenre.DataSource = dt;
+            //bookGenre.DataTextField = "GenreTitle";
+            //bookGenre.DataBind();
 
+        }
         protected void SubmitNewBook(object sender, EventArgs e)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["BookStoreConnection"].ConnectionString;
@@ -29,7 +42,7 @@ namespace BookStore.Pages
                 con.Close();
                 bookTitle.Text = string.Empty;
                 bookDescription.Text = string.Empty;
-                bookGenre.Text = string.Empty;
+              
                 bookAuthor.Text = string.Empty;
                 
             }
