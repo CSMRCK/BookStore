@@ -1,20 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace BookStore.Pages
 {
     public partial class EditBook : System.Web.UI.Page
     {
         SqlCommand cmd;
-        SqlDataAdapter da;
-        DataSet ds;
         protected void Page_Load(object sender, EventArgs e)
         {
             Label1.Text = Request.QueryString["Id"];
